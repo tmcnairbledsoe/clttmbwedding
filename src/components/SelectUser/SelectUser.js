@@ -21,7 +21,7 @@ export default function SelectUser({setCurrentUser, database}){
           setUserData(data);
         }
       });
-    }, []);
+    }, [database]);
 
     const options = users.map(d => ({
         "value" : d,

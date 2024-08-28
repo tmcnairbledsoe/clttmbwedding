@@ -47,7 +47,7 @@ export default function Router( {database} ){
                 setLoading(false);
             }
         });
-    }, []);
+    }, [cookies.user, ip]);
 
     if (loading) {
       return (

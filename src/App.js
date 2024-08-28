@@ -53,7 +53,7 @@ export default function App({user, database, setCurrentUser}) {
         }
       });
     }
-  }, []);
+  }, [database, setCurrentUser, user.userName, userId]);
 
   return (
     <div >

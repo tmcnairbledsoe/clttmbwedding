@@ -25,7 +25,7 @@ export default function RsvpForm({user, database}) {
         }
       });
     }
-  }, [user]);
+  }, [user, database]);
 
   const submitForm = e => {
     //stop the form from submitting
