@@ -19,6 +19,20 @@ jobs:
         with:
           submodules: true
           lfs: false
+      - name: Set up Node.js 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Create .env file
+        run: |
+          echo "REACT_APP_APIKEY=${{ secrets.REACT_APP_APIKEY }}" >> .env
+          echo "REACT_APP_AUTHDOMAIN=${{ secrets.REACT_APP_AUTHDOMAIN }}" >> .env
+          echo "REACT_APP_DATABASEURL=${{ secrets.REACT_APP_DATABASEURL }}" >> .env
+          echo "REACT_APP_PROJECTID=${{ secrets.REACT_APP_PROJECTID }}" >> .env
+          echo "REACT_APP_MESSAGINGSENDERID=${{ secrets.REACT_APP_MESSAGINGSENDERID }}" >> .env
+          echo "REACT_APP_APPID=${{ secrets.REACT_APP_APPID }}" >> .env
+          echo "REACT_APP_MEASUREMENTID=${{ secrets.REACT_APP_MEASUREMENTID }}" >> .env
+          echo "REACT_APP_GOOGLEAPIKEY=${{ secrets.REACT_APP_GOOGLEAPIKEY }}" >> .env
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
