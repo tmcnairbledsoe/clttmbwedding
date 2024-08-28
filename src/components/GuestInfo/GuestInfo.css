@@ -1,0 +1,63 @@
+  #info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  #info div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #photo,
+  #video,
+  #times {
+    flex: 1;
+  }
+  
+  #info img {
+    max-width: 250px;
+    border-radius: 10px;
+  }
+  
+  #mapForGuests {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  #mapForGuests div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #mapForGuests img {
+    max-width: 1000px;
+  }
+
+@media only screen and (max-width: 600px) {
+  
+    #mapForGuests img {
+      max-width: 400px;
+    }
+
+    #info {
+        flex-wrap: wrap;
+    }
+
+    #video,
+    #times {
+      flex-basis: 50%;
+    }
+    
+  }
+  
+  @media only screen and (min-width: 600px) and (max-width: 850px) {
+    #mapForGuests img {
+      max-width: 750px;
+    }
+  }
